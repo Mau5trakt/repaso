@@ -1,0 +1,38 @@
+{%extends "layout.html"%}
+
+
+{%block title%}
+Inicio
+{%endblock%}
+
+{%block content%}
+
+{% if contactos | length > 0 %}
+
+{% for contacto in contactos %}
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <h3 class="card-title text-capitalize"> {{ contacto["nombre"] }} </h3>
+            <p class="m-2"> {{ contacto["telefono"] }} </p>
+            <a href="/editar/{{contacto['id']}}" class="btn btn-secondary mb-2">Editar Contacto</a>
+            <a href="/borrar/{{contacto['id']}} ?>" class="btn btn-danger mb-2">Borrar Contacto</a>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+
+    {% else %}
+
+    <div class="col-md-4 mx-auto">
+        <div class="card card-body text-center">
+          <p>No se hay contactos registrados!</p>
+          <a href="/agregar">Agregar</a>
+        </div>
+      </div>
+
+    {% endif %}
+  </div>
+</div>
+
+{%endblock%}
