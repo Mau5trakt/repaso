@@ -16,7 +16,7 @@ Inicio
             <h3 class="card-title text-capitalize"> {{ contacto["nombre"] }} </h3>
             <p class="m-2"> {{ contacto["telefono"] }} </p>
             <a href="/editar/{{contacto['id']}}" class="btn btn-secondary mb-2">Editar Contacto</a>
-            <a href="/borrar/{{contacto['id']}} ?>" class="btn btn-danger mb-2">Borrar Contacto</a>
+            <a href="/borrar/{{contacto['id']}}" class="btn btn-danger mb-2">Borrar Contacto</a>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@ Inicio
     <div class="col-md-4 mx-auto">
         <div class="card card-body text-center">
           <p>No hay contactos registrados!</p>
-          <a href="/agregar">Agregar</a>
+          <a href="/crearcontacto">Agregar</a>
         </div>
       </div>
 
